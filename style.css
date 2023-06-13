@@ -1,0 +1,130 @@
+html {
+    scroll-behavior: smooth;
+}
+
+#down {
+    margin-top: 100%;
+    padding-bottom: 25%;
+   } 
+
+*{
+    padding:0;
+    margin:0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.navbar {
+    background-color: rgb(1, 128, 173);
+    position: relative;
+    height:1000px;
+    width: 100%;
+}
+  
+.navlink {
+   background-color: rgb(1, 128, 173);
+   color: white;
+   position:absolute;
+   margin-top:600px;
+   margin-left:45%;
+   padding: 12px 12px 12px 12px;
+   text-align: center;
+   border-style: solid;
+   border-width: 2px;
+   border-radius: 15px;
+   border-color: white;
+   cursor: pointer;
+   font-size:20px;
+   text-decoration: none;
+   transition: background-color 1s, color 1s;
+}
+
+.navlink:hover {
+    background-color: rgb(255, 255, 255);
+    color: rgb(1, 128, 173);
+
+ }
+
+ .navlink:active {
+    opacity:0.7;
+
+ }
+
+ .brief {
+    position: absolute;
+    color: white;
+    width: 300px;
+    height:200px;
+    margin-top: 40px;
+    margin-left: 40px;
+    font-size:20px;
+    line-height: 2;
+    letter-spacing: 5px;
+    transition: letter-spacing 1s;
+ }
+
+ .brief:hover {
+    letter-spacing: 9px;
+
+ }
+
+ .greeting {
+    position:absolute;
+    color:white;
+    font-size: 100px;
+    margin-top:350px;
+    margin-left:35%;
+    letter-spacing: 5px;
+    
+ }
+
+ .greeting:hover {
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.4);
+ }
+
+ .portfolio {
+    position: relative;
+    background-color: blanchedalmond;
+    color: black;
+    margin-top:0;
+    height:1000px;
+    width:100%;
+    font-size: 90px;
+  
+ }
+ .title{
+    position: absolute;
+    margin-left:40%;
+    margin-top: 150px;
+ }
+
+ .contact {
+    position: relative;
+    background-color: rgb(255, 187, 0);
+    height:400px;
+    
+ }
+
+ .call-to-action {
+    position: absolute;
+    font-size: 50px;
+    width:700px;
+    height:120px;
+    margin-top: 70px;
+    margin-left: 32%;
+    font-weight: bold;
+ }
+
+ .email {
+    position: absolute;
+    font-size: 50px;
+    margin-top: 250px;
+    margin-left: 10%;
+ }
+
+ .phone {
+    position: absolute;
+    font-size: 50px;
+    margin-top: 250px;
+    margin-left: 70%;
+ }
+ 
