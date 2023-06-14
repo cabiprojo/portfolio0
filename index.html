@@ -5,44 +5,113 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portfolio</title>
   <link rel="stylesheet" href="style.css"> <!-- Link to your CSS file -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+
 </head>
 <body>
-  <header>
-    
-       <div class="navbar">
-            <div class="brief">
-                <p>St. Louis Based</p>
-                <hr>
-                <p>Developer</p>
-                <hr>
-                <p>Student</p>
-                <hr>
-            </div>
+    <header>
+
+        <div class="container">
+            <nav>
+                
+                <div class="brief">
+                    <p>Student</p>
+                    <hr>
+                    <p>Developer</p>
+                    <hr>
+                    <p>St. Louis Based</p>
+                    <hr>
+                </div>
+
+                    <ul id="sidemenu">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#contact-block">Contact</a></li>
+                        <i class="fas fa-times" onclick="closemenu()"></i> 
+                    </ul>
+                     
+                 <i class="fas fa-bars" onclick="openmenu()"></i>   
+            </nav>
+        </div>
+    </header>
+
+  
+
+        <div class="top-block">
+
+            
 
             <div class="greeting">
-                Hi,  I'm  Chris.
-                
+                Hi,  I'm  Chris
             </div>
 
-            <a href="#portfolio" class="navlink">
-                 View my works
-            </a>
-             
-        </div>
-    
-  </header>
+            <img class= "bitmoji" src="https://sdk.bitmoji.com/render/panel/20048676-503420187_84-s5-v1.png?transparent=1&palette=1&scale=1" alt="Bitmoji Image">
 
-  <main>
+
+            <a href="#portfolio" class="navlink">
+                View my works
+            </a>
+        </div>
+
+  
     <section id="portfolio">
         <div class="portfolio">
-            <p class="title">Projects</p>
+          <p class="title top">&lt;projects&gt;</p>
+          <div class="projects-container">
+            <div class="projects-container">
+                <a href="https://cabiprojo.github.io/newcraigslist/" target="_blank" rel="noopener noreferrer">
+                    <div class="work">
+                        <div class="img">
+                            <img src="images/craigslist.png" class="craigslist-img">
+                            <img src="images/craigslist1.png" class="craigslist-img">
+                        </div>
+                        <div class="layer">
+                            <h3>Craigslist Redesigned</h3>
+                            <p>A front-end development focused project, using inspiration and content from
+                                the outdated Craigslist website and revamping into a modern, aesthetic site. Utilized
+                                Google API, scroll animation, and popups. Links and buttons except those to create
+                                or browse postings are functional.
+                            </p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+          </div>
+          <p class="title bottom">&lt;/projects&gt;</p>
         </div>
-    </section>
-    <div class="contact">
-            <p class="call-to-action">Interested in collaborating?</p>
-            <hr>
-            <p class="email">cabiprojo@gmail.com</p>
-            <p class="phone">636 544 7446</p>
+      </section>
+    
+    <div id="contact-block" class="contact-block">
+        <div class="contact-left">
+            <h1 class="call-to-action">Let's Collaborate</p>
+            
+                <p class="email"><i class="far fa-envelope"></i> cabiprojo@gmail.com</p>
+                  
+            <p class="phone"><i class="fas fa-phone"></i> 636-544-7446</p>
+            
+        </div>
+        <div class="contact-right">
+            <form>
+                <input type="text" name="Name" placeholder="Your Name" required>
+                <input type="email" name="Email" placeholder="Your Email" required>
+                <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                <button class="btn" type="submit">Submit</button>
+            </form>
+        </div>
+       
     </div>
 </body>
 </html>
+
+<script>
+    var sidemenu = document.getElementById("sidemenu");
+
+    function openmenu() {
+        sidemenu.style.right="0";
+    }
+    function closemenu() {
+        sidemenu.style.right="-200px";
+    }
+
+</script>
