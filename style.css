@@ -2,129 +2,421 @@ html {
     scroll-behavior: smooth;
 }
 
-#down {
-    margin-top: 100%;
-    padding-bottom: 25%;
-   } 
+body {
+   font-family: "Open Sans", sans-serif;
+ }
 
 *{
     padding:0;
+
     margin:0;
     font-family: 'Roboto', sans-serif;
 }
 
-.navbar {
-    background-color: rgb(1, 128, 173);
-    position: relative;
-    height:1000px;
-    width: 100%;
-}
-  
-.navlink {
-   background-color: rgb(1, 128, 173);
+.container {
+   display: flex;
+   justify-content: space-between;
+ }
+ 
+ nav {
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   justify-content: space-between;
+   background-color: #1e283b;
+   position: relative;
+   height: 200px;
+   padding-top:20px;
+   padding-left:50px;
+   padding-right:10%;
+   width: 100%;
+ }
+
+ .top-block {
+   height:700px;
+   background-color: #1e283b;
+ }
+
+ .bitmoji {
+
+   position:fixed;
+   height:300px;
+   width:300px;
+   margin-left: 10%;
+   margin-top:5%;
+ }
+ 
+ .navlink {
+   background-color: #1e283b;
    color: white;
-   position:absolute;
-   margin-top:600px;
-   margin-left:45%;
-   padding: 12px 12px 12px 12px;
+   position: absolute;
+   top: 60%; /* Updated positioning */
+   left: 50%; /* Updated positioning */
+   transform: translateX(-50%); /* Updated positioning */
+   padding: 12px;
    text-align: center;
-   border-style: solid;
-   border-width: 2px;
-   border-radius: 15px;
-   border-color: white;
+   border: 2px solid white;
+   border-radius: 10px;
    cursor: pointer;
-   font-size:20px;
+   font-size: 20px;
    text-decoration: none;
-   transition: background-color 1s, color 1s;
+   margin-top: 70px;
+   transition: background-color 0.5s, color 0.5s;
+ }
+ 
+ .navlink:hover {
+   background-color: rgb(255, 255, 255);
+   color: #1e283b
+ }
+ 
+ .navlink:active {
+   opacity: 0.7;
+ }
+ 
+ .brief {
+   color: white;
+   font-size: 30px;
+   line-height: 2;
+   letter-spacing: 5px;
+   width:400px;
+   margin-top: 20px;
+   transition: letter-spacing 1s;
+ }
+ 
+ .brief:hover {
+   letter-spacing: 9px;
+ }
+
+ ul {
+   display: flex;
+   align-items: flex-start;
+   list-style-type: none;
+   
+ }
+ 
+ ul li {
+   margin-left: 20px;
+ }
+ 
+ ul li a {
+   position:relative;
+   color: white;
+   text-decoration: none;
+   font-size: 30px; /* Increase the font size */
+   padding: 0px 22px; /* Adjust the padding for larger links */
+ }
+
+ ul li a::after {
+   content:'';
+   width:0;
+   height:3px;
+   background: #FA8072;
+   position:absolute;
+   left:0;
+   bottom:-6px;
+   transition:0.5s;
+ }
+
+ ul li a:hover::after {
+   width:100%;
+ }
+ 
+ .greeting {
+   position: absolute;
+   color: white;
+   font-size: 80px;
+   width: max-content;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   text-align: center;
+   letter-spacing: 5px;
+   overflow: hidden;
+   box-shadow: 5px 5px 10px rgba(0,0,0,0.4);
+   z-index: 1; /* Ensure the text appears above the pseudo-element */
+   padding: 10px; /* Adjust padding as needed */
 }
 
-.navlink:hover {
-    background-color: rgb(255, 255, 255);
-    color: rgb(1, 128, 173);
+.greeting::before {
+   content: '';
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 0; /* Initially hide the pseudo-element */
+   height: 100%;
+   background-color: #FA8072; /* Set the background color */
+   transition: width 0.5s ease-in-out; /* Apply the width transition */
+   z-index: -1; /* Place the pseudo-element below the text */
+}
 
- }
+.greeting:hover::before {
+   width: 100%; /* Expand the width of the pseudo-element to the right */
+}
 
- .navlink:active {
-    opacity:0.7;
 
- }
-
- .brief {
-    position: absolute;
-    color: white;
-    width: 300px;
-    height:200px;
-    margin-top: 40px;
-    margin-left: 40px;
-    font-size:20px;
-    line-height: 2;
-    letter-spacing: 5px;
-    transition: letter-spacing 1s;
- }
-
- .brief:hover {
-    letter-spacing: 9px;
-
- }
-
- .greeting {
-    position:absolute;
-    color:white;
-    font-size: 100px;
-    margin-top:350px;
-    margin-left:35%;
-    letter-spacing: 5px;
-    
- }
-
- .greeting:hover {
-    box-shadow: 5px 5px 10px rgba(0,0,0,0.4);
- }
 
  .portfolio {
-    position: relative;
-    background-color: blanchedalmond;
-    color: black;
-    margin-top:0;
-    height:1000px;
-    width:100%;
-    font-size: 90px;
-  
+   position: relative;
+   background-color: #1e283b;
+   color: black;
+   margin-top: 0;
+   height: 1000px;
+   width: 100%;
+   font-size: 60px;
  }
- .title{
-    position: absolute;
-    margin-left:40%;
-    margin-top: 150px;
+ 
+ .title {
+   color: #FA8072;
+   position: absolute;
+   margin-left: 35px;
+   letter-spacing: 3px;
+   font-weight: bold;
+ }
+ 
+ .title.top {
+   top: 50px;
+ }
+ 
+ .title.bottom {
+   bottom: 50px;
+ }
+ 
+ .projects-container {
+   height: 100%;
+   width: max-content;
+}
+
+.work {
+   display: flex;
+   flex-direction: column;
+   position: relative; /* Added positioning */
+   top:200px;
+   left:200px;
+   height: 600px;
+   width: 550px;
+   border-radius: 10px;
+   overflow: hidden; /* Moved overflow from .layer to .work */
+   cursor: pointer;
+}
+
+.work img {
+   width: 550px;
+   border-radius: 10px;
+   display: block;
+   height: max-content;
+   transition: transform 0.5s;
+}
+
+.craigslist-img {
+   height: auto;
+   width: auto;
+}
+
+.layer {
+   width: 100%;
+   height: 0;
+   background: linear-gradient(rgba(0, 0, 0, 0.3), #616060);
+   position: absolute;
+   left: 0;
+   bottom: 0;
+   border-radius: 10px; /* Moved border-radius from .work to .layer */
+   overflow: hidden;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-direction: column;
+   transition: height 0.5s;
+   text-align: center;
+}
+
+.layer h3 {
+   font-size: 30px;
+   color: white; /* Added text color */
+}
+
+.layer p {
+   padding-top: 10px;
+   width:350px;
+   font-size: 20px;
+   color: white; /* Added text color */
+}
+
+.work:hover img {
+   transform:scale(1.1);
+}
+
+.work:hover .layer {
+   height: 100%;
+}
+ 
+
+ .contact-block {
+   display: flex;
+   flex-direction: row;
+    position: relative;
+    background-color: #1e283b;
+    padding-top: 200px;
+    height:max-content;
+    color:aliceblue;
+    
  }
 
- .contact {
-    position: relative;
-    background-color: rgb(255, 187, 0);
-    height:400px;
-    
+ .contact-left {
+   flex-basis:35%;
+ }
+
+ .contact-right {
+   flex-basis:60%;
+ }
+
+ .contact-right form {
+   display: flex;
+   width:fit-content;
+   flex-direction: column;
+   padding-bottom: 30px;
+
+ }
+
+
+ form input, form textarea {
+   width:100%;
+   border:0;
+   outline: none;
+   background: #ffffff;
+   padding:15px;
+   margin: 15px 0;
+   color: #000000;
+   font-size: 18px;
+   border-radius:6px;
+
  }
 
  .call-to-action {
     position: absolute;
+    
     font-size: 50px;
     width:700px;
     height:120px;
-    margin-top: 70px;
-    margin-left: 32%;
+    
+    margin-left: 60px;
+    margin-bottom: 50px;
     font-weight: bold;
  }
 
  .email {
+   margin-top: 20px;
+   
     position: absolute;
-    font-size: 50px;
-    margin-top: 250px;
-    margin-left: 10%;
+    font-size: 20px;
+    
  }
 
  .phone {
+   margin-top:70px;
     position: absolute;
-    font-size: 50px;
-    margin-top: 250px;
-    margin-left: 70%;
+    font-size: 20px;
+    
+    
  }
+
+ .btn {
+   color: white;
+   font-size: 20px;
+   font-weight: bold;
+   background-color: #E6482E;
+   border: 1px solid #E6482E;
+   border-radius: 10px;
+   width: 200px;
+   height: 50px;
+   padding: 10px;
+   cursor: pointer;
+   transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+   background-color: #fc553c;
+}
+
+.btn:active {
+   background-color: #E6482E;
+}
+
+ nav .fas {
+   display:none;
+ }
+
+ @media (max-width: 1400px) {
+      
+   .greeting {
+      
+      font-size: 50px;
+      text-align: center;
+  
+    }
+
+    .brief{
+      font-size: 25px;
+      width:300px;
+    }
+
+    .work {
+      
+      left:50px;
+      height:550px;
+      width:400px;
+    }
+
+    .contact-block {
+      flex-direction: column;
+    }
+
+    .bitmoji {
+      display: none;
+    }
+
+    .contact-right {
+      padding-left: 50px;
+      padding-bottom: 100px;
+      align-items: center;
+      padding-top: 200px;
+      max-width:50%;
+    }
+
  
+
+    nav .fas {
+      display:block;
+      font-size: 25px;
+      color: white;
+      z-index: 1;
+      cursor:pointer;
+    }
+
+    nav ul{
+      background-color:#fc553c;
+      position:fixed;
+      top:0;
+      right:-200px;
+      width:200px;
+      flex-direction: column;
+      height:100vh;
+      padding-top:50px;
+      z-index: 2;
+      transition:0.5s;
+    }
+
+    nav ul li{
+      display:block;
+      margin:25px;
+      z-index: 50;
+    }
+
+    nav ul .fas{
+      position: absolute;
+      top:25px;
+      left:25px;
+      cursor:pointer;
+    }
+    
+
+ }
