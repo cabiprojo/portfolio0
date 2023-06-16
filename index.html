@@ -25,8 +25,8 @@
 
                     <ul id="sidemenu">
                         <li><a href="#">Home</a></li>
-                        <li><a href="#portfolio">Portfolio</a></li>
-                        <li><a href="#">About</a></li>
+                        <li><a href="#title-top">Portfolio</a></li>
+                        <li><a href="#about-block">About</a></li>
                         <li><a href="#contact-block">Contact</a></li>
                         <i class="fas fa-times" onclick="closemenu()"></i> 
                     </ul>
@@ -49,38 +49,103 @@
             <img class= "bitmoji" src="https://sdk.bitmoji.com/render/panel/20048676-503420187_84-s5-v1.png?transparent=1&palette=1&scale=1" alt="Bitmoji Image">
 
 
-            <a href="#portfolio" class="navlink">
+            <a href="#title-top" class="navlink">
                 View my works
             </a>
         </div>
 
+        <div class="project-heading">
+            <p id="title-top" class="title top">&lt;projects&gt;</p>
+        </div>
+
+        
+
   
     <section id="portfolio">
         <div class="portfolio">
-          <p class="title top">&lt;projects&gt;</p>
-          <div class="projects-container">
+          
             <div class="projects-container">
-                <a href="https://cabiprojo.github.io/newcraigslist/" target="_blank" rel="noopener noreferrer">
-                    <div class="work">
-                        <div class="img">
-                            <img src="images/craigslist.png" class="craigslist-img">
-                            <img src="images/craigslist1.png" class="craigslist-img">
+
+                <div class="project1">
+                    <a href="https://cabiprojo.github.io/newcraigslist/" target="_blank" rel="noopener noreferrer">
+                        <div class="work">
+                            <div class="img">
+                                <img src="images/craigslist.png" class="craigslist-img">
+                                <img src="images/craigslist1.png" class="craigslist-img">
+                            </div>
+                            <div class="layer">
+                                <h3>Craigslist Redesigned</h3>
+                                <p>In this front-end development focused project, I drew inspiration from the outdated Craigslist website 
+                                    and transformed it into a modern and visually appealing site. The revamp involved utilizing Google API, 
+                                    implementing scroll animations, and incorporating modal popups. The project ensures a fully responsive
+                                    site and all links and buttons excluding those to create or browse postings are functional.
+                                </p>
+                            </div>
                         </div>
-                        <div class="layer">
-                            <h3>Craigslist Redesigned</h3>
-                            <p>A front-end development focused project, using inspiration and content from
-                                the outdated Craigslist website and revamping into a modern, aesthetic site. Utilized
-                                Google API, scroll animation, and popups. Links and buttons except those to create
-                                or browse postings are functional.
-                            </p>
+                        
+                    </a>
+                </div>
+                
+                <div class="project2">
+                        <div class="work">
+                            <div class="img">
+                                <img src="images/PianoRecord.png" class="piano-img">
+                                <img src="images/PianoPlay.png" class="piano-img">
+                            </div>
+                            <div class="layer">
+                                <h3>Piano Recorder</h3>
+                                <p> This was a simple, fun project focused on the backend where users can press keys on the keyboard that 
+                                    correspond to piano keys. It provides an option to record and play the keys, and when the playback 
+                                    is initiated, the piano plays the recorded keys automatically. The project utilizes Node.js, a 
+                                    backend environment, to store recordings in a database, along with audio files and animations.
+
+                                </p>
+                            </div>
                         </div>
-                    </div>
-                </a>
-            </div>
+                </div>
+            
           </div>
-          <p class="title bottom">&lt;/projects&gt;</p>
+          
         </div>
       </section>
+
+      <div class="project-heading">
+        <p class="title top">&lt;projects&gt;</p>
+    </div>
+
+    <div id="about-block" class="about-block">
+            <p class="about-heading">Skilled in </p>
+          
+            <div class="skills">
+                <div class="icon">
+                  <div class="icon-container">
+                    <img class="icon js" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/800px-JavaScript-logo.png" alt="JavaScript logo">
+                    <p>JavaScript</p>
+                  </div>
+                  <div class="icon-container">
+                    <img class="icon html" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/640px-HTML5_logo_and_wordmark.svg.png" alt="HTML logo">
+                    <p>HTML</p>
+                  </div>
+                  <div class="icon-container">
+                    <img class="icon css" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/1200px-CSS3_logo_and_wordmark.svg.png" alt="CSS logo">
+                    <p>CSS</p>
+                  </div>
+                  <div class="icon-container">
+                    <img class="icon nodejs" src="https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg" alt="Node.js logo">
+                    <p>Node.js</p>
+                  </div>
+                  <div class="icon-container">
+                    <img class="icon python" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1869px-Python-logo-notext.svg.png" alt="Python logo">
+                    <p>Python</p>
+                  </div>
+                  <div class="icon-container">
+                    <img class="icon java" src="https://upload.wikimedia.org/wikipedia/en/thumb/3/30/Java_programming_language_logo.svg/800px-Java_programming_language_logo.svg.png" alt="Java logo">
+                    <p>Java</p>
+                  </div>
+                </div>
+              </div>
+     
+    </div>
     
     <div id="contact-block" class="contact-block">
         <div class="contact-left">
@@ -92,7 +157,7 @@
             
         </div>
         <div class="contact-right">
-            <form>
+            <form name="submit-to-google-sheet">
                 <input type="text" name="Name" placeholder="Your Name" required>
                 <input type="email" name="Email" placeholder="Your Email" required>
                 <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
@@ -115,3 +180,15 @@
     }
 
 </script>
+
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbw-N8E-QaUCGZS4esTvkT87RkvOGkbDueChEfefkwfksWyPBMSHqMOhJQ_0SmKKGZv6uA/exec'
+    const form = document.forms['submit-to-google-sheet']
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => console.log('Success!', response))
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
