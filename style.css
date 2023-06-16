@@ -238,9 +238,12 @@ body {
 }
 
 .piano-img {
-  height: 280px !important;
-  width: 550px !important;
+  width: 100%;
+  height: auto !important;
+  max-width: 550px !important;
+  max-height: 280px !important;
 }
+
 
 
 .layer {
@@ -285,7 +288,7 @@ body {
   display: flex;
   flex-direction: column;
   background-color: #1e283b;
-  height: 500px;
+  height: 300px;
   width:100%;
   padding-top: 50px;;
   
@@ -459,19 +462,18 @@ body {
 
   .projects-container {
     flex-direction: column;
+    align-items: center !important; /* Center content horizontally */
+    justify-content: center !important;
   }
 
-  .work {
-      
-    
-    height:550px;
-    width:400px;
-  }
+
 
 
   
  }
+
  @media (max-width: 1300px) {
+  
   .icon img{
     height: 70px;
       width: 70px;
@@ -480,6 +482,7 @@ body {
  }
 
  @media (max-width: 1200px) {
+
       
    .greeting {
       
@@ -514,16 +517,9 @@ body {
       max-width:50%;
     }
 
-    .work {
-      
-      height:500px;
-      width:350px;
-    }
+    
 
-    .craigslist-img {
-      height:250px;
-      width:175px;
-    }
+    
 
     .icon img{
       height: 60px;
@@ -593,10 +589,15 @@ body {
         
         margin: 0 auto; /* Center horizontally using margin */
       }
+      .greeting {
+        margin-top: 20px;
+      }
+
     }
 
 
     @media (max-width: 767px) {
+
       
 
       .title.top{
@@ -607,11 +608,55 @@ body {
         height:500px;
       }
 
-      .work {
-      
-        height:450px;
-        width:300px;
+      .work{
+        margin-left:-70px;
+
       }
+
+     
+
+     .work img {
+      width: 100%;
+      max-width: 550px;
+      height: auto;
+    }
+
+    .craigslist-img{
+      width: 300px !important;
+     }
+    
+    .piano-img {
+      width:300px !important;
+      max-width: 100%;
+      max-height: 280px;
+    }
+
+    .layer {
+      width: 100%; /* Set the width to 100% to fill the container */
+      max-width:330px;
+      height: 0;
+      max-height:560px;
+      margin-left:20%;
+      background: linear-gradient(rgba(0, 0, 0, 0.3), #616060);
+      position: absolute; /* Position the layer relative to the work container */
+      bottom: 0; /* Position the layer at the bottom of the work container */
+      left: 0; /* Position the layer at the left of the work container */
+      border-radius: 10px; /* Moved border-radius from .work to .layer */
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      transition: height 0.5s;
+      text-align: center;
+    }
+
+      .layer p {
+        padding-top: 0px;
+        width:300px;
+        font-size: 15px;
+     }
+     
 
       .icon img{
         height: 50px;
@@ -623,10 +668,8 @@ body {
         height: 65px;
           width:65px;
       }
-  
 
-      
-      
+
       
     }
 
